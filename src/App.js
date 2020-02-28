@@ -6,15 +6,16 @@ import Topbar from './components/Topbar';
 
 
 const App = () => {
-  return(
-<div className="container">
+  return (
 
-  <Topbar />
     <div>
-      Hello Worlds
+      <Topbar />
+      <div>
+        Hello Worlds
       <Students />
       </div>
-      </div>
+    </div>
+    
   );
 }
 
