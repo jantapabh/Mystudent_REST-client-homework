@@ -4,11 +4,10 @@ import './Bar.css';
 
 const Topbar = () => {
 
-
     return (
         <div>
             <div className="Bar">
-                Barrrr
+                <h1>STUDENT FORM</h1>
             </div>
         </div>
     );
