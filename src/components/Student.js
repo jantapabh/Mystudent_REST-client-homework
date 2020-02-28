@@ -3,7 +3,7 @@ import App from './App.js'
 
 
 
-const App = () => {
+const Students = () => {
 
     return(
 
@@ -15,4 +15,4 @@ const App = () => {
     );
 }
 
-export default App;
+export default Students;
