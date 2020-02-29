@@ -43,6 +43,7 @@ export default () => {
             }) //ส่วนในการ add ค่าของ student
 
         console.log(result.data)
+        alert("Add Student Finish")
         getStudents()
 
     }
@@ -125,7 +126,8 @@ export default () => {
                 <
                 button className = "B1"
                 onClick = {
-                    () => getStudents(student.generations) } > Get Click < /button>  <br / >
+                    () => getStudents(student.generations)
+                } > Get Click < /button>  <br / >
                 <
                 button className = "B2"
                 onClick = {
@@ -137,8 +139,8 @@ export default () => {
                     () => deleteStudents(student.generations)
                 } > Delet Click < /button>  <br / >
                 <
-                /div>  <
-                /div>
+                /div>  < /
+                div >
             )
         })
         else {
@@ -231,7 +233,8 @@ export default () => {
             type = "text"
             name = "faculty"
             onChange = {
-                (e) => setFaculty(e.target.value) }
+                (e) => setFaculty(e.target.value)
+            }
             />
 
             Advisor
@@ -242,7 +245,8 @@ export default () => {
             type = "text"
             name = "advisor"
             onChange = {
-                (e) => setAdvisor(e.target.value) }
+                (e) => setAdvisor(e.target.value)
+            }
             />
 
             <
@@ -250,8 +254,8 @@ export default () => {
             div className = "Button-add" >
             <
             button className = "B4"
-            onClick = { addStudent } > ADD < /button>  <
-            /div > <
+            onClick = { addStudent } > ADD < /button>  < /
+            div > <
             /div>
         );
     }
