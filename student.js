@@ -113,6 +113,7 @@ router.route('/students/:student_generation')
 })
 
 .put((req, res) => {
+
     // Update a bear
     let generation = req.params.student_generation
     let index = students.findIndex(student => (student.generation === +generation))
@@ -122,6 +123,7 @@ router.route('/students/:student_generation')
     students[index].faculty = req.body.faculty;
     students[index].advisor = req.body.advisor;
     res.json({ message: 'Student Updated!' + req.params.student_generation });
+
 })
 
 .delete((req, res) => {
