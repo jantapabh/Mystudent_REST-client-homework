@@ -127,7 +127,7 @@ router.route('/students/:student_generation')
     students[index].surname = req.body.surname;
     students[index].faculty = req.body.faculty;
     students[index].advisor = req.body.advisor;
-    res.json({ message: 'Student updated!' + req.params.student_generation });
+    res.json({ message: 'Student Updated!' + req.params.student_generation });
 
 })
 
@@ -136,10 +136,8 @@ router.route('/students/:student_generation')
     let generation = req.params.student_generation
     let index = students.findIndex(student => student.generation === +generation)
     students.splice(index, 1)
-    res.json({ message: 'Student deleted : ' + req.params.student_generation });
-
+    res.json({ message: 'Student Deleted : ' + req.params.student_generation });
 })
-
 
 app.use("*", (req, res) => res.status(404).send('404 Not found'));
 
