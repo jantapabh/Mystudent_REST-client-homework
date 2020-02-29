@@ -47,7 +47,7 @@ export default () => {
 
     }
 
-    const getStudent = async (generation) => {
+    const getStudent = async (generations) => {
 
         const result = await axios.get(`http://localhost:8000/api/students/${generation}`)
 
@@ -62,7 +62,7 @@ export default () => {
 
     }  //ส่วนในการ get ค่าของ student
 
-    const updateStudents = async (generation) => {
+    const updateStudents = async (generations) => {
 
         const result = await axios.put(`http://localhost:8000/api/students/${generation}`, {
 
@@ -83,15 +83,15 @@ export default () => {
         setSurname(result.data.surname)
         setFaculty(result.data.faculty)
         setAdvisor(result.data.advisor)
-
+        getStudents()
 
     }
 
-    const deleteStudents = async (generation) => {
+    const deleteStudents = async (generations) => {
 
         const result = await axios.delete(`http://localhost:8000/api/students/${generation}`)
 
-        getStudent()
+        getStudents()
 
     } // ส่วนของการลบค่า student
 
@@ -113,9 +113,9 @@ export default () => {
                         Advisor : {student.advisor} <br />
 
 
-                        <button onClick={() => getStudents(student.generation)}>Get Click</button>  <br />
-                        <button onClick={() => updateStudents(student.generation)}>Update Click</button>  <br />
-                        <button onClick={() => deleteStudents(student.generation)}>Delet Click</button>  <br />
+                        <button onClick={() => getStudents(student.generations)}>Get Click</button>  <br />
+                        <button onClick={() => updateStudents(student.generations)}>Update Click</button>  <br />
+                        <button onClick={() => deleteStudents(student.generations)}>Delet Click</button>  <br />
 
 
                     </li>
@@ -139,12 +139,12 @@ export default () => {
             </ul>
             <h2>GET STUDENT</h2>
             GET :
-            Gen : {student.generation} <br />
-            ID : {student.idStudent}  <br />
-            Name : {student.name}  <br />
-            Surname : {student.surname}  <br />
-            Faculty : {student.faculty}  <br />
-            Advisor : {student.advisor} <br />
+            Gen : {generation} <br />
+            ID : {idStudent}  <br />
+            Name : {name}  <br />
+            Surname : {surname}  <br />
+            Faculty : {faculty}  <br />
+            Advisor : {advisor} <br />
 
             <h2>ADD STUDENT</h2>
 
