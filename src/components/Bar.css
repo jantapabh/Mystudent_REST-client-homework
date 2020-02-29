@@ -1,7 +1,6 @@
 /* Bar Css */
 
 .Bar {
-
     background-color: aquamarine;
     text-align: center;
     align-items: center;
@@ -12,5 +11,5 @@
     display: flex;
     justify-content: center;
     border-radius: 5px;
-    
+    color: brown;
 }
