@@ -6,7 +6,6 @@ let router = express.Router()
 
 app.use(cors());
 
-
 app.use('/api', bodyParser.json(), router)
 app.use('/api', bodyParser.urlencoded({
     extended: false
@@ -95,7 +94,6 @@ router.route('/students')
 .post((req, res) => {
 
     let student = {}
-
     student.generation = students[students.length - 1].generation + 1
     student.idStudent = req.body.idStudent;
     student.name = req.body.name;
@@ -109,17 +107,13 @@ router.route('/students')
 router.route('/students/:student_generation')
 
 .get((req, res) => {
-
     let generation = req.params.student_generation
     let index = students.findIndex(student => (student.generation === +generation))
     res.json(students[index])
-
 })
 
 .put((req, res) => {
-
     // Update a bear
-
     let generation = req.params.student_generation
     let index = students.findIndex(student => (student.generation === +generation))
     students[index].idStudent = req.body.idStudent;
@@ -128,7 +122,6 @@ router.route('/students/:student_generation')
     students[index].faculty = req.body.faculty;
     students[index].advisor = req.body.advisor;
     res.json({ message: 'Student Updated!' + req.params.student_generation });
-
 })
 
 .delete((req, res) => {
