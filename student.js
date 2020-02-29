@@ -133,14 +133,12 @@ router.route('/students/:student_generation')
 
 .delete((req, res) => {
 
-
     let generation = req.params.student_generation
     let index = students.findIndex(student => student.generation === +generation)
     students.splice(index, 1)
     res.json({ message: 'Student deleted : ' + req.params.student_generation });
 
 })
-
 
 
 app.use("*", (req, res) => res.status(404).send('404 Not found'));
