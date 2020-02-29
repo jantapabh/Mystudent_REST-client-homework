@@ -104,7 +104,7 @@ export default () => {
                 return (
 
                     <div className="List">
-                        <li key={index}>
+                        <li key={index} className="Top-up">
 
                             Gen : {student.generation} <br />
                             ID : {student.idStudent}  <br />
@@ -112,12 +112,17 @@ export default () => {
                             Surname : {student.surname}  <br />
                             Faculty : {student.faculty}  <br />
                             Advisor : {student.advisor} <br />
+                            <br />
+                            <br />
 
-
-                            <button onClick={() => getStudents(student.generations)}>Get Click</button>  <br />
-                            <button onClick={() => updateStudents(student.generations)}>Update Click</button>  <br />
-                            <button onClick={() => deleteStudents(student.generations)}>Delet Click</button>  <br />
                         </li>
+
+                        <div className="Button">
+
+                            <button className="B1" onClick={() => getStudents(student.generations)}>Get Click</button>  <br />
+                            <button className="B2" onClick={() => updateStudents(student.generations)}>Update Click</button>  <br />
+                            <button className="B3" onClick={() => deleteStudents(student.generations)}>Delet Click</button>  <br />
+                            </div>
                     </div>
                 )
             })
@@ -133,20 +138,23 @@ export default () => {
     return (
 
         <div>
-            <div className="Topic"> 
-            <h2>STUDENTS LIST</h2>
+            <div className="Topic">
+                <h2>STUDENTS LIST</h2>
             </div>
             <ul>
                 {printStudent()}
             </ul>
-            <h2>GET STUDENT</h2>
-            GET :
-            Gen : {generation} <br />
-            ID : {idStudent}  <br />
-            Name : {name}  <br />
-            Surname : {surname}  <br />
-            Faculty : {faculty}  <br />
-            Advisor : {advisor} <br />
+            <div cla>
+                <h2>GET STUDENT</h2>
+                
+                Gen : {generation} <br />
+                ID : {idStudent}  <br />
+                Name : {name}  <br />
+                Surname : {surname}  <br />
+                Faculty : {faculty}  <br />
+                Advisor : {advisor} <br />
+
+            </div>
 
             <h2>ADD STUDENT</h2>
 
