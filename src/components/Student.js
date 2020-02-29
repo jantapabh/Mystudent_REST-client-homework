@@ -50,7 +50,7 @@ export default () => {
 
     const getStudent = async(generations) => {
 
-            const result = await axios.get(`http://localhost:8000/api/students/${generation}`)
+            const result = await axios.get(`http://localhost:8000/api/students/${generations}`)
 
             console.log(result.data)
             setGenerat(result.data.generation)
@@ -66,7 +66,7 @@ export default () => {
 
     const updateStudents = async(generations) => {
 
-        const result = await axios.put(`http://localhost:8000/api/students/${generation}`, {
+        const result = await axios.put(`http://localhost:8000/api/students/${generations}`, {
 
                 students,
                 generation,
@@ -92,7 +92,7 @@ export default () => {
 
     const deleteStudents = async(generations) => {
 
-            const result = await axios.delete(`http://localhost:8000/api/students/${generation}`)
+            const result = await axios.delete(`http://localhost:8000/api/students/${generations}`)
             alert("Delete Student Finish")
             getStudents()
 
