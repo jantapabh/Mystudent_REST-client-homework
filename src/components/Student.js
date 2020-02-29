@@ -59,6 +59,7 @@ export default () => {
             setSurname(result.data.surname)
             setFaculty(result.data.faculty)
             setAdvisor(result.data.advisor)
+            alert("Get Student Finish")
 
 
         } //ส่วนในการ get ค่าของ student
@@ -84,6 +85,7 @@ export default () => {
         setSurname(result.data.surname)
         setFaculty(result.data.faculty)
         setAdvisor(result.data.advisor)
+        alert("Update Student Finish")
         getStudents()
 
     }
@@ -91,7 +93,7 @@ export default () => {
     const deleteStudents = async(generations) => {
 
             const result = await axios.delete(`http://localhost:8000/api/students/${generation}`)
-
+            alert("Delete Student Finish")
             getStudents()
 
         } // ส่วนของการลบค่า student
