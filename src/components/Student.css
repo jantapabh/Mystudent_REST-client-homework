@@ -1,0 +1,18 @@
+
+.Topic {
+
+     margin: 20px;
+
+}
+ .List {
+
+    background-color: bisque;
+    display: inline-block;
+    justify-content: space-between;
+    border-radius: 10px;
+    align-items: center;
+    margin: 5px;
+    padding: 17px;
+
+
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-
+import './Student.css';
 
 export default () => {
 
@@ -103,22 +103,22 @@ export default () => {
 
                 return (
 
-                    <li key={index}>
+                    <div className="List">
+                        <li key={index}>
 
-                        Gen : {student.generation} <br />
-                        ID : {student.idStudent}  <br />
-                        Name : {student.name}  <br />
-                        Surname : {student.surname}  <br />
-                        Faculty : {student.faculty}  <br />
-                        Advisor : {student.advisor} <br />
-
-
-                        <button onClick={() => getStudents(student.generations)}>Get Click</button>  <br />
-                        <button onClick={() => updateStudents(student.generations)}>Update Click</button>  <br />
-                        <button onClick={() => deleteStudents(student.generations)}>Delet Click</button>  <br />
+                            Gen : {student.generation} <br />
+                            ID : {student.idStudent}  <br />
+                            Name : {student.name}  <br />
+                            Surname : {student.surname}  <br />
+                            Faculty : {student.faculty}  <br />
+                            Advisor : {student.advisor} <br />
 
 
-                    </li>
+                            <button onClick={() => getStudents(student.generations)}>Get Click</button>  <br />
+                            <button onClick={() => updateStudents(student.generations)}>Update Click</button>  <br />
+                            <button onClick={() => deleteStudents(student.generations)}>Delet Click</button>  <br />
+                        </li>
+                    </div>
                 )
             })
         else {
@@ -133,7 +133,9 @@ export default () => {
     return (
 
         <div>
-            <h1>STUDENTS</h1>
+            <div className="Topic"> 
+            <h2>STUDENTS LIST</h2>
+            </div>
             <ul>
                 {printStudent()}
             </ul>
