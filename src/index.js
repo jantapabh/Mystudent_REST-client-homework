@@ -53,6 +53,6 @@ store.subscribe( () => {
 store.dispatch({
 
     type: "ADD",
-    payload: 500,
+    payload: 500
 
 })
