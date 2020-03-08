@@ -34,11 +34,9 @@ const reducer = (state, action) => {
             break;
 
         default:
-
     }
 
     return state;
-
 }
 
 const store = createStore(reducer, 1);
